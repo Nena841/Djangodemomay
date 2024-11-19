@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="text-center fw-bold">Welcome to Library Application:<span>
+{% if user.is_authenticated %}
+{{user.username}}
+{% else %}
+Guest</span></h2>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="mb-3">
+  <label  class="form-label">EMPID</label>
+  <input type="number" class="form-control" name="e" placeholder="empid">
+</div>
+
+<div class="mb-3">
+  <label  class="form-label">ENMAE</label>
+  <input type="text" class="form-control" name="n" placeholder="ename">
+</div>
+
+    <div class="mb-3">
+  <label  class="form-label">AGE</label>
+  <input type="number" class="form-control" name="a" placeholder="age">
+</div>
+
+    <div class="mb-3">
+  <label  class="form-label">ADDRESS</label>
+  <input type="text" class="form-control" name="ad" placeholder="address">
+</div>
+
+    <div class="mb-3">
+  <label  class="form-label">EMAIL</label>
+  <input type="email" class="form-control" name="m" placeholder="email">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">image</label>
+  <input type="file" class="form-control" name="i">
+</div>
+
+    <div class="mb-3">
+
+  <input type="submit" value="enter">
+</div>
+</form>
+
+
+
+{% endblock %}
